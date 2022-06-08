@@ -1,5 +1,4 @@
-import {Component} from "react";
-import React from "react";
+import React, {Component} from "react";
 
 class Input extends Component {
   state = {
@@ -19,15 +18,15 @@ class Input extends Component {
   render() {
     return (
       <div className="Input">
-        <form onSubmit={e => this.onSubmit(e)}>
+        <form className="flex-fullWidth" onSubmit={e => this.onSubmit(e)}>
           <input
+            autoFocus
             onChange={e => this.onChange(e)}
             value={this.state.text}
             type="text"
-            placeholder="Enter your message and press ENTER"
-            autofocus="true"
+            placeholder="Upiši poruku"
           />
-          <button>Send</button>
+          <button>Pošalji</button>
         </form>
       </div>
     );

@@ -49,6 +49,12 @@
   border-radius: 50%;
   display: inline-block;
   margin: 0 10px -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #d3d3d3;
 }
 
 .Message-content > .username {
@@ -72,14 +78,6 @@
   background-color: orangered;
 }
 
-form {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  max-width: 900px;
-  margin: 0 auto 40px;
-}
-
 input {
   padding: 5px;
   font-size: 16px;
@@ -96,4 +94,65 @@ button {
   border: none;
   border-radius: 8px;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+/* custom css */
+
+.flex-fullWidth {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.padding-all {
+  padding: 0rem 0 1rem;
+}
+
+.optionToggle {
+  cursor: pointer;
+}
+
+.optionToggle svg {
+  height: 30px;
+  width: 30px;
+}
+
+body.dark-mode {
+  background: #000;
+}
+
+.dark-mode div span {
+  color: rgb(211, 211, 211);
+}
+
+.dark-mode input {
+  background:rgb(211, 211, 211);;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.options {
+  transition: opacity 0.25s ease-in;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.show {
+  opacity: 1;
+  height: auto;
 }
